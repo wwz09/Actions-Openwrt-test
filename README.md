@@ -4,9 +4,9 @@
 
       
           
-下载：    https://github.com/wwz09/Actions-OpenWrt/releases
+下载：    https://github.com/wwz09/Actions-Openwrt-test/actions
 
-流程：    https://github.com/wwz09/Actions-OpenWrt/actions
+流程：     https://github.com/wwz09/Actions-Openwrt-test/actions
 
 A template for building OpenWrt with GitHub Actions
 
