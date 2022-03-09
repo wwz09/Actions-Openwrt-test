@@ -4,7 +4,7 @@
 
       
           
-下载：    https://github.com/wwz09/Actions-Openwrt-test/actions
+下载：     https://github.com/wwz09/Actions-Openwrt-test/releases
 
 流程：     https://github.com/wwz09/Actions-Openwrt-test/actions
 
