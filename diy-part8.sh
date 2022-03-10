@@ -6,7 +6,7 @@
 # See /LICENSE for more information.
 #
 # https://github.com/P3TERX/Actions-OpenWrt
-# File name: diy-part8.sh
+# File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
@@ -40,6 +40,7 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/lu
 #  '添加新的主题包'
 git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
 git clone https://github.com/YL2209/luci-theme-argon-lr.git package/lean/luci-theme-argon-lr
+git clone https://github.com/apollo-ng/luci-theme-darkmatter.git package/lean/luci-theme-darkmatter
 
 # '修改默认主题为Argon'
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
