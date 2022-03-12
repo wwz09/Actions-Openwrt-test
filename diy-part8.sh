@@ -6,7 +6,7 @@
 # See /LICENSE for more information.
 #
 # https://github.com/P3TERX/Actions-OpenWrt
-# File name: diy-part2.sh
+# File name: diy-part8.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
@@ -33,18 +33,17 @@ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 
 
 # '添加argon-config 使用最新argon
-rm -rf package/lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
+# rm -rf package/lean/luci-theme-argon
+# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
 
 #  '添加新的主题包'
 git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
 git clone https://github.com/YL2209/luci-theme-argon-lr.git package/lean/luci-theme-argon-lr
-git clone https://github.com/apollo-ng/luci-theme-darkmatter.git package/lean/luci-theme-darkmatter
 
 # '修改默认主题为Argon'
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
-sed -i 's/Bootstrap/argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci/Makefile
+sed -i 's/Bootstrap/argonne/g' feeds/luci/collections/luci/Makefile
 
 
 #'修改WIFI国家区域'
