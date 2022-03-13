@@ -20,7 +20,7 @@ sed -i 's/OpenWrt/RM2100/g' package/base-files/files/bin/config_generate
 
 # 拷贝mac80211.sh
 rm -rf package/kernel/mac80211/files/lib/wifi
-cp -rf $GITHUB_WORKSPACE/diy/KYT/wifi package/kernel/mac80211/files/lib/wifi
+cp -rf $GITHUB_WORKSPACE/diy/KYTC/wifi package/kernel/mac80211/files/lib/wifi
 
 
 # 拷贝wireless文件到files目录
