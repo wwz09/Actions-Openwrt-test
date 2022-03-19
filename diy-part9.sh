@@ -29,7 +29,7 @@ chmod 0755 files
 cp -rf  $GITHUB_WORKSPACE/diy/KYTG/wireless files/etc/config
 
 # '应用过滤插件'
-git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
+# git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 
 
 # '添加argon-config 使用最新argon
