@@ -29,7 +29,7 @@ cp -rf $GITHUB_WORKSPACE/diy/KYTG/wifi package/kernel/mac80211/files/lib/wifi
 # cp -rf  $GITHUB_WORKSPACE/diy/KYTG/wireless files/etc/config
 
 # '应用过滤插件'
-# git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
+ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 
 
 # '添加argon-config 使用最新argon
@@ -42,8 +42,8 @@ cp -rf $GITHUB_WORKSPACE/diy/KYTG/wifi package/kernel/mac80211/files/lib/wifi
 # git clone https://github.com/YL2209/luci-theme-argon-lr.git package/lean/luci-theme-argon-lr
 
 # '修改默认主题为Argon'
-# sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci/Makefile
-# sed -i 's/Bootstrap/argonne/g' feeds/luci/collections/luci/Makefile
+ sed -i 's/luci-theme-bootstrap/luci-theme-Argon/g' feeds/luci/collections/luci/Makefile
+ sed -i 's/Bootstrap/Argon/g' feeds/luci/collections/luci/Makefile
 
 
 #'修改WIFI国家区域'
@@ -53,7 +53,7 @@ cp -rf $GITHUB_WORKSPACE/diy/KYTG/wifi package/kernel/mac80211/files/lib/wifi
 # sed -i 's/OpenWrt/KYT/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 修改输出文件名
-sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=KYT-$(shell date +%Y%m%d)-$(VERSION_DIST_SANITIZED)/g' include/image.mk
+sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=KYTLienol-$(shell date +%Y%m%d)-$(VERSION_DIST_SANITIZED)/g' include/image.mk
 
 # '修改连接数数'
 sed -i 's/net.netfilter.nf_conntrack_max=.*/net.netfilter.nf_conntrack_max=65535/g' package/kernel/linux/files/sysctl-nf-conntrack.conf
