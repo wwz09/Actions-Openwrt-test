@@ -1,0 +1,37 @@
+
+config basic
+	option enabled '1'
+	option algos 'bm'
+
+config macbind
+	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
+	option enable '1'
+	option proto 'tcp'
+	option macaddr '48:2C:A0:51:03:D2'
+	option timeon '01:00'
+	option timeoff '13：00'
+
+config macbind
+	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
+	option proto 'tcp'
+	option enable '1'
+	option macaddr '48:2C:A0:51:03:D2'
+	option timeon '15:00'
+	option timeoff '16:00'
+
+config macbind
+	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
+	option proto 'tcp'
+	option enable '1'
+	option macaddr '48:2C:A0:51:03:D2'
+	option timeon '17:00'
+	option timeoff '18:30'
+
+config macbind
+	option enable '1'
+	option proto 'tcp'
+	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
+	option macaddr '48:2C:A0:51:03:D2'
+	option timeon '21:00'
+	option timeoff '23:59'
+
