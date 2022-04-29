@@ -32,7 +32,7 @@ cp -rf  $GITHUB_WORKSPACE/diy/KKT/wireless files/etc/config
 git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 
 # '管控插件'
-git clone https://github.com/gdck/luci-app-control-weburl.git package/luci-app-control-weburl
+# git clone https://github.com/gdck/luci-app-control-weburl.git package/luci-app-control-weburl
 
 # '添加argon-config 使用最新argon
 # rm -rf package/lean/luci-theme-argon
