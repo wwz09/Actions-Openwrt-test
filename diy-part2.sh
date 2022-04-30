@@ -28,6 +28,9 @@ sed -i 's/OpenWrt/GDOCK-KKT/g' package/base-files/files/bin/config_generate
 chmod 0755 files
 cp -rf  $GITHUB_WORKSPACE/diy/KKT/wireless files/etc/config
 
+# weburl 文件加执行权限
+chmod  +x  files/etc/inid.d/weburl 
+
 # '应用过滤插件'
 git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 
@@ -40,12 +43,12 @@ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 # git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
 
 #  '添加新的主题包'
-git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
-git clone https://github.com/YL2209/luci-theme-argon-lr.git package/lean/luci-theme-argon-lr
+# git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
+# git clone https://github.com/YL2209/luci-theme-argon-lr.git package/lean/luci-theme-argon-lr
 
 # '修改默认主题为Argon'
-sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci/Makefile
-sed -i 's/Bootstrap/argonne/g' feeds/luci/collections/luci/Makefile
+# sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci/Makefile
+# sed -i 's/Bootstrap/argonne/g' feeds/luci/collections/luci/Makefile
 
 
 #'修改WIFI国家区域'
