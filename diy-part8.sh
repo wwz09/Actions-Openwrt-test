@@ -18,6 +18,8 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 # '修改默认主机名'
 sed -i 's/OpenWrt/GDOCK-KYT/g' package/base-files/files/bin/config_generate
 
+# 删除 '访问时间控制'
+ rm -rf feeds/luci/applications/luci-app-accesscontrol 
 
 # 拷贝mac80211.sh
 # rm -rf package/kernel/mac80211/files/lib/wifi
@@ -28,7 +30,7 @@ sed -i 's/OpenWrt/GDOCK-KYT/g' package/base-files/files/bin/config_generate
 chmod 0755 files
 cp -rf  $GITHUB_WORKSPACE/diy/KYTG/wireless files/etc/config
 # weburl 文件加执行权限
-chmod  +x  files/etc/inid.d/weburl 
+chmod  0777  files/etc/inid.d/weburl 
 
 # '应用过滤插件'
 git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
