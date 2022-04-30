@@ -5,27 +5,27 @@ config basic
 
 config macbind
 	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
-	option enable '1'
-	option proto 'tcp'
 	option macaddr '48:2C:A0:51:03:D2'
+	option proto 'tcp'
 	option timeon '01:00'
-	option timeoff '13：00'
+	option timeoff '13:00'
+	option enable '1'
 
 config macbind
 	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
-	option proto 'tcp'
-	option enable '1'
 	option macaddr '48:2C:A0:51:03:D2'
+	option proto 'tcp'
 	option timeon '15:00'
 	option timeoff '16:00'
+	option enable '1'
 
 config macbind
 	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
-	option proto 'tcp'
-	option enable '1'
 	option macaddr '48:2C:A0:51:03:D2'
+	option proto 'tcp'
 	option timeon '17:00'
 	option timeoff '18:30'
+	option enable '1'
 
 config macbind
 	option enable '1'
@@ -33,5 +33,37 @@ config macbind
 	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
 	option macaddr '48:2C:A0:51:03:D2'
 	option timeon '21:00'
+	option timeoff '23:59'
+
+config macbind
+	option enable '1'
+	option proto 'tcp'
+	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
+	option macaddr 'E0:B6:55:A6:92:70'
+	option timeoff '12:00'
+	option timeon '00:01'
+
+config macbind
+	option enable '1'
+	option proto 'tcp'
+	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
+	option macaddr 'E0:B6:55:A6:92:70'
+	option timeon '22:35'
+	option timeoff '23:59'
+
+config macbind
+	option enable '1'
+	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
+	option macaddr 'E0:B6:55:A6:92:70'
+	option proto 'udp'
+	option timeon '00:01'
+	option timeoff '12:00'
+
+config macbind
+	option enable '1'
+	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
+	option macaddr 'E0:B6:55:A6:92:70'
+	option proto 'udp'
+	option timeon '22:35'
 	option timeoff '23:59'
 
