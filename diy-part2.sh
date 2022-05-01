@@ -19,8 +19,10 @@ sed -i 's/192.168.1.1/192.168.3.1/g' package/base-files/files/bin/config_generat
 sed -i 's/OpenWrt/GDOCK-KKT/g' package/base-files/files/bin/config_generate
 
 # 删除 '访问时间控制'
- rm -rf feeds/luci/applications/luci-app-accesscontrol 
+rm -rf feeds/luci/applications/luci-app-accesscontrol 
 
+# 删除 'ipsec-vpn（VPN服务器）'
+rm -rf feeds/luci/applications/luci-app-ipsec-vpnd
 
 # 拷贝mac80211.sh
 # rm -rf package/kernel/mac80211/files/lib/wifi
