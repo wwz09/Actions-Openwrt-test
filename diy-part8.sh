@@ -33,7 +33,7 @@ rm -rf feeds/luci/applications/luci-app-ipsec-vpnd
 chmod 0755 files
 cp -rf  $GITHUB_WORKSPACE/diy/KYTG/wireless files/etc/config
 # weburl 文件加执行权限
-# chmod  -R 777  files/etc/inid.d/weburl 
+chmod 7777 files/etc/init.d/weburl 
 
 # '应用过滤插件'
 git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
