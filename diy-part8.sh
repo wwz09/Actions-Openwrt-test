@@ -52,6 +52,7 @@ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 
 # '修改默认主题为Argon'
 sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci/Makefile
+sed -i 's/config internal themes/config internal themes\n    option argonne  \"\/luci-static\/argonne\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
 # sed -i 's/Bootstrap/argonne/g' feeds/luci/collections/luci/Makefile
 
 
