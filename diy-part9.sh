@@ -18,21 +18,26 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 # '修改默认主机名'
 sed -i 's/OpenWrt/GDOCK-KYT/g' package/base-files/files/bin/config_generate
 
+# 删除 '访问时间控制'
+rm -rf feeds/luci/applications/luci-app-accesscontrol 
+
+# 删除 'ipsec-vpn（VPN服务器）'
+rm -rf feeds/luci/applications/luci-app-ipsec-vpnd
 
 # 拷贝mac80211.sh
-rm -rf package/kernel/mac80211/files/lib/wifi
-cp -rf $GITHUB_WORKSPACE/diy/KYTG/wifi package/kernel/mac80211/files/lib/wifi
+# rm -rf package/kernel/mac80211/files/lib/wifi
+# cp -rf $GITHUB_WORKSPACE/diy/KYTG/wifi package/kernel/mac80211/files/lib/wifi
 
 
 # 拷贝wireless文件到files目录
 chmod 0755 files
 cp -rf  $GITHUB_WORKSPACE/diy/KYTG/wireless files/etc/config
 
+# weburl 文件加执行权限
+chmod 7777 files/etc/init.d/weburl 
+
 # '应用过滤插件'
 git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
-
-# '时间控制'
-# git clone https://github.com/4IceG/luci-app-timecontrol.git package/luci-app-timecontrol
 
 # '管控插件'
 # git clone https://github.com/gdck/luci-app-control-weburl.git package/luci-app-control-weburl
