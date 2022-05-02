@@ -1,7 +1,7 @@
 
 config basic
 	option enabled '1'
-	option algos 'bm'
+	option algos 'kmp'
 
 config macbind
 	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
@@ -65,5 +65,21 @@ config macbind
 	option macaddr 'E0:B6:55:A6:92:70'
 	option proto 'udp'
 	option timeon '22:35'
+	option timeoff '23:59'
+
+config macbind
+	option enable '1'
+	option proto 'tcp'
+	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
+	option macaddr '78:2B:46:29:64:E5'
+	option timeon '00:01'
+	option timeoff '12:00'
+
+config macbind
+	option enable '1'
+	option proto 'tcp'
+	option daysofweek 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday'
+	option macaddr '78:2B:46:29:64:E5'
+	option timeon '22:40'
 	option timeoff '23:59'
 
