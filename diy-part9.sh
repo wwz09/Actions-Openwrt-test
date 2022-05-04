@@ -19,7 +19,7 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 sed -i 's/OpenWrt/GDOCK-KYT/g' package/base-files/files/bin/config_generate
 
 # 删除 '访问时间控制'
-rm -rf feeds/luci/applications/luci-app-accesscontrol 
+ rm -rf feeds/luci/applications/luci-app-accesscontrol 
 
 # 删除 'ipsec-vpn（VPN服务器）'
 rm -rf feeds/luci/applications/luci-app-ipsec-vpnd
@@ -52,15 +52,16 @@ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 # git clone https://github.com/YL2209/luci-theme-argon-lr.git package/lean/luci-theme-argon-lr
 
 # '修改默认主题为Argon'
-# sed -i 's/luci-theme-bootstrap/luci-theme-Argon/g' feeds/luci/collections/luci/Makefile
-# sed -i 's/Bootstrap/Argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci/Makefile
+sed -i 's/config internal themes/config internal themes\n    option argonne  \"\/luci-static\/argonne\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
+# sed -i 's/Bootstrap/argonne/g' feeds/luci/collections/luci/Makefile
 
 
 #'修改WIFI国家区域'
 # sed -i 's/US/CN/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #修改默认无线名称
-# sed -i 's/OpenWrt/KYT/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/OpenWrt/KYT/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 修改输出文件名
 sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=KYT-$(shell date +%Y%m%d)-$(VERSION_DIST_SANITIZED)/g' include/image.mk
