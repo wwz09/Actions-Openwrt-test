@@ -15,7 +15,7 @@
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
 #修改默认主机名
-sed -i 's/OpenWrt/EA6500V2/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/R2100/g' package/base-files/files/bin/config_generate
 
 # 删除 '访问时间控制'
  rm -rf feeds/luci/applications/luci-app-accesscontrol 
