@@ -52,10 +52,10 @@ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 # git clone https://github.com/YL2209/luci-theme-argon-lr.git package/lean/luci-theme-argon-lr
 
 # '修改默认主题为Argon'
-sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci/Makefile
+sed -i 's/bootstrap/argonne/g' feeds/luci/collections/luci/Makefile
+sed -i 's/Bootstrap/Argonne/g' feeds/luci/collections/luci/Makefile
+sed -i 's/bootstrap/argonne/g' feeds/luci/modules/luci-base/root/etc/config/luci
 sed -i 's/config internal themes/config internal themes\n    option argonne  \"\/luci-static\/argonne\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
-# sed -i 's/Bootstrap/argonne/g' feeds/luci/collections/luci/Makefile
-
 
 #'修改WIFI国家区域'
 # sed -i 's/US/CN/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
