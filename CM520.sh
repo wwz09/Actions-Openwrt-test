@@ -32,7 +32,7 @@ rm -rf feeds/luci/applications/luci-app-ipsec-vpnd
 
 # 拷贝wireless文件到files目录
 chmod 0755 files
-cp -rf  $GITHUB_WORKSPACE/diy/KYTG/wireless files/etc/config
+cp -rf  $GITHUB_WORKSPACE/diy/KKT/wireless files/etc/config
 
 # weburl 文件加执行权限
 chmod 7777 files/etc/init.d/weburl 
@@ -65,7 +65,7 @@ sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/theme
 sed -i 's/OpenWrt/KYT/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 修改输出文件名
-sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=KYT-$(shell date +%Y%m%d)-$(VERSION_DIST_SANITIZED)/g' include/image.mk
+sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=KKT-$(shell date +%Y%m%d)-$(VERSION_DIST_SANITIZED)/g' include/image.mk
 
 # '修改连接数数'
 sed -i 's/net.netfilter.nf_conntrack_max=.*/net.netfilter.nf_conntrack_max=65535/g' package/kernel/linux/files/sysctl-nf-conntrack.conf
