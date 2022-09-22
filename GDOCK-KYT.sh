@@ -12,7 +12,7 @@
 
 
 # '修改默内核'
- sed -i 's/PATCHVER:=5.4/PATCHVER:=5.10/g' target/linux/ipq40xx/Makefile         # ipq40xx，内核：5.4，内核为5.10
+# sed -i 's/PATCHVER:=5.4/PATCHVER:=5.10/g' target/linux/ipq40xx/Makefile         # ipq40xx，内核：5.4，内核为5.10
  
 # '修改默认IP'
 
@@ -54,6 +54,9 @@ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 #  '添加新的主题包'
 # git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
 # git clone https://github.com/YL2209/luci-theme-argon-lr.git package/lean/luci-theme-argon-lr
+
+# 编译多主题时,设置固件默认主题（可自行修改您要的,主题名称必须对,比如下面代码的[argon],和肯定编译了该主题,要不然进不了后台）
+#sed -i "/exit 0/i\uci set luci.main.mediaurlbase='/luci-static/argon' && uci commit luci" "$FIN_PATH"
 
 # '修改默认主题为argonne'
 sed -i 's/config internal themes/config internal themes\n    option argonne  \"\/luci-static\/argonne\"/g' feeds/luci/modules/luci-base/root/etc/config/luci

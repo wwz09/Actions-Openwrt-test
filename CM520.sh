@@ -11,7 +11,7 @@
 #
 
 # '修改默内核'
- sed -i 's/PATCHVER:=5.4/PATCHVER:=5.10/g' target/linux/ipq40xx/Makefile         # ipq40xx，内核：5.4，内核为5.10
+# sed -i 's/PATCHVER:=5.4/PATCHVER:=5.10/g' target/linux/ipq40xx/Makefile         # ipq40xx，内核：5.4，内核为5.10
 # 修改默认IP
 
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
