@@ -34,7 +34,7 @@ rm -rf feeds/luci/applications/luci-app-ipsec-vpnd
 
 # 拷贝wireless文件到files目录
 chmod 0755 files
-cp -rf diy/wirelessY files/etc/config/wireless
+cp -rf $GITHUB_WORKSPACE/diy/wirelessY files/etc/config/wireless
 
 # weburl 文件加执行权限
 chmod 7777 files/etc/init.d/weburl 
