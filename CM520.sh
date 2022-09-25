@@ -30,7 +30,7 @@ rm -rf feeds/luci/applications/luci-app-ipsec-vpnd
 
 # 拷贝wireless文件到files目录
 chmod 0755 files
-cp -rf  $GITHUB_WORKSPACE/diy/KYTG/wireless files/etc/config
+cp -rf $GITHUB_WORKSPACE/diy/wirelessK files/etc/config/wireless
 
 # weburl 文件加执行权限
 chmod 7777 files/etc/init.d/weburl 
@@ -70,4 +70,7 @@ sed -i 's/net.netfilter.nf_conntrack_max=.*/net.netfilter.nf_conntrack_max=65535
 
 # '修改概览里时间显示为中文数字'
 sed -i 's/os.date()/os.date("%Y年%m月%d日") .. " " .. translate(os.date("%A")) .. " " .. os.date("%X")/g' package/lean/autocore/files/arm/index.htm
+
+# '首页增加CPU频率动态显示'
+cp -rf $GITHUB_WORKSPACE/diy/mod-index.htm ./feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 
