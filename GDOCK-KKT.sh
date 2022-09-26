@@ -58,7 +58,7 @@ sed -i "/exit 0/i\uci set luci.main.mediaurlbase='/luci-static/argonne' && uci c
 # sed -i 's/config internal themes/config internal themes\n    option argonne  \"\/luci-static\/argonne\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
 # '去除默认bootstrap主题'
-sed -i '/set luci.main.mediaurlbase=\/luci-static\/Bootstrap/d' feeds/luci/themes/luci-theme-Bootstrap/root/etc/uci-defaults/30_luci-theme-Bootstrap
+sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 
 
 #'修改WIFI国家区域'
