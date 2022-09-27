@@ -12,7 +12,7 @@
 
 # 修改默认IP
 
-sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.3.1/g' package/base-files/files/bin/config_generate
 
 #修改默认主机名
 sed -i 's/OpenWrt/CM520/g' package/base-files/files/bin/config_generate
@@ -50,11 +50,14 @@ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 # git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
 # git clone https://github.com/YL2209/luci-theme-argon-lr.git package/lean/luci-theme-argon-lr
 
-# '修改默认主题为Argon'
-sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci/Makefile
-sed -i 's/config internal themes/config internal themes\n    option argonne  \"\/luci-static\/argonne\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
-# sed -i 's/Bootstrap/argonne/g' feeds/luci/collections/luci/Makefile
+# 编译多主题时,设置固件默认主题（可自行修改您要的,主题名称必须对,比如下面代码的[argon],和肯定编译了该主题,要不然进不了后台）
+sed -i "/exit 0/i\uci set luci.main.mediaurlbase='/luci-static/argonne' && uci commit luci" "$FIN_PATH"
 
+# '修改默认主题为argonne'
+# sed -i 's/config internal themes/config internal themes\n    option argonne  \"\/luci-static\/argonne\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
+
+# '去除默认bootstrap主题'
+sed -i '/set luci.main.mediaurlbase=\/luci-static\/Bootstrap/d' feeds/luci/themes/luci-theme-Bootstrap/root/etc/uci-defaults/30_luci-theme-Bootstrap
 
 #'修改WIFI国家区域'
 # sed -i 's/US/CN/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
