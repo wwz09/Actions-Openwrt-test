@@ -33,6 +33,10 @@ rm -rf feeds/luci/applications/luci-app-ipsec-vpnd
 chmod 0755 files
 cp -rf $GITHUB_WORKSPACE/diy/wirelessK files/etc/config/wireless
 
+# 拷贝patch文件到package目录
+chmod 0755 package
+cp -rf $GITHUB_WORKSPACE/patch/jq/Makefile packages/utils/jq/Makefile
+
 # weburl 文件加执行权限
 chmod 7777 files/etc/init.d/weburl 
 
