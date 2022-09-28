@@ -37,8 +37,8 @@ chmod 0755 files
 cp -rf $GITHUB_WORKSPACE/diy/wirelessY files/etc/config/wireless
 
 # 拷贝patch文件到package目录
-chmod 0755 package
-cp -rf $GITHUB_WORKSPACE/patch/jq/Makefile packages/utils/jq/Makefile
+# chmod 0755 package
+# cp -rf $GITHUB_WORKSPACE/patch/jq/Makefile packages/utils/jq/Makefile
 
 
 # weburl 文件加执行权限
