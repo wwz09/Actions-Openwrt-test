@@ -33,8 +33,8 @@ rm -rf feeds/luci/applications/luci-app-ipsec-vpnd
 
 
 # 拷贝wireless文件到files目录
-chmod 0755 files
-cp -rf $GITHUB_WORKSPACE/diy/wirelessY files/etc/config/wireless
+# chmod 0755 files
+# cp -rf $GITHUB_WORKSPACE/diy/wirelessY files/etc/config/wireless
 
 
 # weburl 文件加执行权限
@@ -62,13 +62,16 @@ sed -i "/exit 0/i\uci set luci.main.mediaurlbase='/luci-static/argonne' && uci c
 # sed -i 's/config internal themes/config internal themes\n    option argonne  \"\/luci-static\/argonne\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
 # '去除默认bootstrap主题'
-sed -i '/set luci.main.mediaurlbase=\/luci-static\/Bootstrap/d' feeds/luci/themes/luci-theme-Bootstrap/root/etc/uci-defaults/30_luci-theme-Bootstrap
+# sed -i '/set luci.main.mediaurlbase=\/luci-static\/Bootstrap/d' feeds/luci/themes/luci-theme-Bootstrap/root/etc/uci-defaults/30_luci-theme-Bootstrap
 
 #'修改WIFI国家区域'
-# sed -i 's/US/CN/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/US/CN/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #修改默认无线名称
-# sed -i 's/OpenWrt/KYT/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/OpenWrt/KYT/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
+#修改无线加密及密码
+sed -i 's/encryption=none/encryption=psk-mixed+ccmp\n            set wireless.default_radio${devidx}.key=abc5124937,\n/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 修改输出文件名
 sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=KYT-$(shell date +%Y%m%d)-$(VERSION_DIST_SANITIZED)/g' include/image.mk
