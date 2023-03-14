@@ -38,6 +38,9 @@ chmod 7777 files/etc/init.d/weburl
 # '应用过滤插件'
 git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 
+# '添加luci-app-diskman
+https://github.com/lisaac/luci-app-diskman.git package/lean/luci-app-diskman
+
 # '管控插件'
 # git clone https://github.com/gdck/luci-app-control-weburl.git package/luci-app-control-weburl
 
