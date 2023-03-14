@@ -18,7 +18,7 @@ sed -i 's/192.168.1.1/192.168.3.1/g' package/base-files/files/bin/config_generat
 sed -i 's/OpenWrt/RM2100/g' package/base-files/files/bin/config_generate
 
 # 删除 '访问时间控制'
- rm -rf feeds/luci/applications/luci-app-accesscontrol 
+rm -rf feeds/luci/applications/luci-app-accesscontrol 
 
 # 删除 'ipsec-vpn（VPN服务器）'
 rm -rf feeds/luci/applications/luci-app-ipsec-vpnd
@@ -29,8 +29,8 @@ rm -rf feeds/luci/applications/luci-app-ipsec-vpnd
 
 
 # 拷贝wireless文件到files目录
-chmod 0755 files
-cp -rf $GITHUB_WORKSPACE/diy/wirelessK files/etc/config/wireless
+# chmod 0755 files
+# cp -rf $GITHUB_WORKSPACE/diy/wirelessK files/etc/config/wireless
 
 # weburl 文件加执行权限
 chmod 7777 files/etc/init.d/weburl 
@@ -61,10 +61,13 @@ sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/theme
 
 
 #'修改WIFI国家区域'
-# sed -i 's/US/CN/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/US/CN/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #修改默认无线名称
-# sed -i 's/OpenWrt/KYT/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/OpenWrt/KYT/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
+#修改无线加密及密码
+sed -i 's/encryption=none/encryption=psk-mixed+ccmp\n            set wireless.default_radio${devidx}.key=abc5124937,\n/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 修改输出文件名
 sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=KKT-$(shell date +%Y%m%d)-$(VERSION_DIST_SANITIZED)/g' include/image.mk
