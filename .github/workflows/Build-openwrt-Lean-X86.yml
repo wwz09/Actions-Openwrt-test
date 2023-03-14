@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build openwrt-BX86
+name: Build openwrt-Lean-X86
 
 on:
   repository_dispatch:
@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: config/BX86.config
+  CONFIG_FILE: config/Lean-X86.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: openwrt-x86.sh
   UPLOAD_BIN_DIR: false
