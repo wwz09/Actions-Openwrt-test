@@ -24,16 +24,6 @@ rm -rf feeds/luci/applications/luci-app-accesscontrol
 # 删除 'ipsec-vpn（VPN服务器）'
 rm -rf feeds/luci/applications/luci-app-ipsec-vpnd
 
-# 拷贝mac80211.sh
-# rm -rf package/kernel/mac80211/files/lib/wifi
-# cp -rf $GITHUB_WORKSPACE/diy/KKT/wifi package/kernel/mac80211/files/lib/wifi
-
-
-# 拷贝wireless文件到files目录
-# chmod 0755 files
-# cp -rf $GITHUB_WORKSPACE/diy/wirelessK files/etc/config/wireless
-
-
 # weburl 文件加执行权限
 chmod 7777 files/etc/init.d/weburl 
 
@@ -58,11 +48,11 @@ https://github.com/lisaac/luci-app-diskman.git package/lean/luci-app-diskman
 # 编译多主题时,设置固件默认主题（可自行修改您要的,主题名称必须对,比如下面代码的[argon],和肯定编译了该主题,要不然进不了后台）
 sed -i "/exit 0/i\uci set luci.main.mediaurlbase='/luci-static/argonne' && uci commit luci" "$FIN_PATH"
 
+# '去除默认bootstrap主题'
+sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+
 # '修改默认主题为argonne'
 sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci/Makefile
-
-# '去除默认bootstrap主题'
-# sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 
 
 #'修改WIFI国家区域'
