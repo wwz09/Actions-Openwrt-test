@@ -59,10 +59,10 @@ https://github.com/lisaac/luci-app-diskman.git package/lean/luci-app-diskman
 sed -i "/exit 0/i\uci set luci.main.mediaurlbase='/luci-static/argonne' && uci commit luci" "$FIN_PATH"
 
 # '修改默认主题为argonne'
-# sed -i 's/config internal themes/config internal themes\n    option argonne  \"\/luci-static\/argonne\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
+sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci/Makefile
 
 # '去除默认bootstrap主题'
-sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+# sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 
 
 #'修改WIFI国家区域'
