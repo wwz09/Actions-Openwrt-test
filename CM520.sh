@@ -56,10 +56,6 @@ sed -i 's/"管理权"/"密码修改"/g' feeds/luci/modules/luci-base/po/zh-cn/ba
 sed -i 's/TTYD 终端/超级终端/g' feeds/luci/applications/luci-app-ttyd/po/zh-cn/terminal.po
 #sed -i 's/\/bin\/login/\/bin\/login -f root/' feeds/packages/utils/ttyd/files/ttyd.config
 
-sed -i 's/iKoolProxy 滤广告/超级滤广告/g' package/lean/luci-app-godproxy/luasrc/controller/*.lua
-sed -i 's/iKoolProxy滤广告/超级滤广告/g' package/lean/luci-app-godproxy/luasrc/model/cbi/koolproxy/*.lua
-sed -i 's/iKoolProxy 滤广告/超级滤广告/g' package/lean/luci-app-godproxy/luasrc/view/koolproxy/*.htm
-
 sed -i 's/解锁网易云灰色歌曲/云音乐解锁/g' feeds/luci/applications/luci-app-unblockmusic/po/zh-cn/unblockmusic.po
 
 
