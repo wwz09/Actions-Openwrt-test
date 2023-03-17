@@ -44,6 +44,9 @@ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 # '添加luci-app-diskman
 https://github.com/lisaac/luci-app-diskman.git package/lean/luci-app-diskman
 
+# 使用原始最新版本
+git clone --depth=1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+
 #  '添加新的主题包'
 # git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
 # git clone https://github.com/YL2209/luci-theme-argon-lr.git package/lean/luci-theme-argon-lr

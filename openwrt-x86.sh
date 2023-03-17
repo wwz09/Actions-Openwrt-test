@@ -41,6 +41,10 @@ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 # '添加luci-app-diskman
 https://github.com/lisaac/luci-app-diskman.git package/lean/luci-app-diskman
 
+# 使用原始最新版本
+git clone --depth=1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+
+
 #  '添加新的主题包'
 # git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
 # git clone https://github.com/YL2209/luci-theme-argon-lr.git package/lean/luci-theme-argon-lr
@@ -61,7 +65,6 @@ sed -i 's/TTYD 终端/超级终端/g' feeds/luci/applications/luci-app-ttyd/po/z
 #sed -i 's/\/bin\/login/\/bin\/login -f root/' feeds/packages/utils/ttyd/files/ttyd.config
 
 sed -i 's/解锁网易云灰色歌曲/云音乐解锁/g' feeds/luci/applications/luci-app-unblockmusic/po/zh-cn/unblockmusic.po
-
 
 
 #'修改WIFI国家区域'

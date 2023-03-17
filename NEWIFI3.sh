@@ -44,6 +44,9 @@ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 # '添加luci-app-diskman
 https://github.com/lisaac/luci-app-diskman.git package/lean/luci-app-diskman
 
+# 使用原始最新版本
+git clone --depth=1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+
 # '去除默认bootstrap主题'
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 
@@ -57,8 +60,6 @@ sed -i 's/TTYD 终端/超级终端/g' feeds/luci/applications/luci-app-ttyd/po/z
 #sed -i 's/\/bin\/login/\/bin\/login -f root/' feeds/packages/utils/ttyd/files/ttyd.config
 
 sed -i 's/解锁网易云灰色歌曲/云音乐解锁/g' feeds/luci/applications/luci-app-unblockmusic/po/zh-cn/unblockmusic.po
-
-
 
 #'修改WIFI国家区域'
 sed -i 's/US/CN/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh

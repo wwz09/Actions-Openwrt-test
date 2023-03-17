@@ -32,6 +32,9 @@ git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 # '添加luci-app-diskman
 https://github.com/lisaac/luci-app-diskman.git package/lean/luci-app-diskman
 
+# 使用原始最新版本
+git clone --depth=1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+
 # '管控插件'
 # git clone https://github.com/gdck/luci-app-control-weburl.git package/luci-app-control-weburl
 
