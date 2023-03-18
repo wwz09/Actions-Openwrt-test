@@ -55,13 +55,16 @@ sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/theme
 sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci/Makefile
 
 # 修改插件名字
-# sed -i 's/"挂载 SMB 网络共享"/"挂载共享"/g' `grep "挂载 SMB 网络共享" -rl ./`
+sed -i 's/"挂载点"/"磁盘挂载"/g' `grep "挂载点" -rl ./`
 sed -i 's/"Argonne 主题设置"/"主题设置"/g' `grep "Argonne 主题设置" -rl ./`
 # sed -i 's/"阿里云盘 WebDAV"/"阿里云盘"/g' `grep "阿里云盘 WebDAV" -rl ./`
 sed -i 's/"Hello World"/"世界你好"/g' `grep "Hello World" -rl ./`
 sed -i 's/"iKoolProxy 滤广告"/"广告屏蔽"/g' `grep "iKoolProxy 滤广告" -rl ./`
 sed -i 's/"DDNSTO 远程控制"/"远程控制"/g' `grep "DDNSTO 远程控制" -rl ./`
 sed -i 's/"网络存储"/"存储设置"/g' `grep "网络存储" -rl ./`
+sed -i 's/"重启"/"系统重启"/g' `grep "重启" -rl ./`
+sed -i 's/"服务"/"应用服务"/g' `grep "服务" -rl ./`
+sed -i 's/"CPU 性能优化调节"/"CPU 设置"/g' `grep "CPU 性能优化调节" -rl ./`
 sed -i 's/"网络"/"网络设置"/g' `grep "网络" -rl ./`
 sed -i 's/"接口"/"接口设置"/g' `grep "接口" -rl ./`
 sed -i 's/"无线"/"无线设置"/g' `grep "无线" -rl ./`
