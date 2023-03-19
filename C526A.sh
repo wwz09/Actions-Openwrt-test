@@ -57,6 +57,8 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/lu
 sed -i 's/"挂载点"/"磁盘挂载"/g' `grep "挂载点" -rl ./`
 sed -i 's/"Argonne 主题设置"/"主题设置"/g' `grep "Argonne 主题设置" -rl ./`
 # sed -i 's/"阿里云盘 WebDAV"/"阿里云盘"/g' `grep "阿里云盘 WebDAV" -rl ./`
+sed -i 's/"状态"/"系统状态"/g' `grep "状态" -rl ./`
+sed -i 's/"系统"/"系统设置"/g' `grep "系统" -rl ./`
 sed -i 's/"Hello World"/"世界你好"/g' `grep "Hello World" -rl ./`
 sed -i 's/"iKoolProxy 滤广告"/"广告屏蔽"/g' `grep "iKoolProxy 滤广告" -rl ./`
 sed -i 's/"DDNSTO 远程控制"/"远程控制"/g' `grep "DDNSTO 远程控制" -rl ./`
