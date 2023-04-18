@@ -35,3 +35,25 @@ A template for building OpenWrt with GitHub Actions
 ## License
 
 [MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE) © [**P3TERX**](https://p3terx.com)
+
+## 特别感谢以下项目：
+
+## Openwrt 官方项目：
+
+https://github.com/openwrt/openwrt
+
+## 精益大的Openwrt项目：
+
+https://github.com/coolsnowwolf/lede
+
+## immortalwrt 的 OpenWrt 项目：
+
+https://github.com/immortalwrt/immortalwrt
+
+## P3TERX 大佬的Actions-OpenWrt 项目：
+
+https://github.com/P3TERX/Actions-OpenWrt
+
+# SuLingGG大佬的动作编辑框架项目：
+
+https://github.com/SuLingGG/OpenWrt-Rpi
