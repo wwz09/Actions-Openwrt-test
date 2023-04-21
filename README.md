@@ -12,9 +12,11 @@
 
       
           
-下载：     https://github.com/wwz09/Actions-Openwrt-test/releases
-
-流程：     https://github.com/wwz09/Actions-Openwrt-test/actions
+## 固件下载
+| 序号 | 设备 | 编译状态 | 下载链接 |
+| :----: | :----: | :---- | :----: |
+| 1 | [![](https://img.shields.io/badge/OpenWrt-CM520-blue?style=flat-square)](https://github.com/wwz09/Actions-Openwrt-test/blob/master/.github/workflows/build-openwrt-CM520.yml) | [![](https://img.shields.io/github.com/wwz09/Actions-Openwrt-test/blob/master/.github/workflows/build-openwrt-CM520.yml?branch=main&label=CM520&logo=openwrt&style=flat-square)](https://github.com/wwz09/Actions-Openwrt-test/blob/master/.github/workflows/build-openwrt-CM520.yml) | [![](https://shields.io/badge/-下载固件-informational?style=flat-square)](https://github.com/wwz09/Actions-Openwrt-test/releases) |
+| 2 | [![](https://img.shields.io/badge/OpenWrt-GDOCK-KYT-blue?style=flat-square)](https://github.com/wwz09/Actions-Openwrt-test/blob/master/.github/workflows/build-openwrt-GDOCK-KYT.yml) | [![](https://img.shields.io/github.com/wwz09/Actions-Openwrt-test/blob/master/.github/workflows/GDOCK-KYT.yml?branch=main&label=GDOCK－KYT&logo=openwrt&style=flat-square)](https://github.com/wwz09/Actions-Openwrt-test/blob/master/.github/workflows/GDOCK-KYT.yml) | [![](https://shields.io/badge/-下载固件-informational?style=flat-square)](https://github.com/wwz09/Actions-Openwrt-test/releases) |
 
 A template for building OpenWrt with GitHub Actions
 
