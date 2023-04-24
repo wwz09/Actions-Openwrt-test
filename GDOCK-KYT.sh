@@ -21,40 +21,58 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 # '修改默认主机名'
 sed -i 's/OpenWrt/GDOCK-KYT/g' package/base-files/files/bin/config_generate
 
-# 删除 '访问时间控制'
- rm -rf feeds/luci/applications/luci-app-accesscontrol 
 
-# 删除 'ipsec-vpn（VPN服务器）'
+# 删除 'lean部分包'
 rm -rf feeds/luci/applications/luci-app-ipsec-vpnd
+rm -rf feeds/luci/applications/luci-app-diskman
+rm -rf feeds/luci/applications/luci-app-accesscontrol
+rm -rf feeds/luci/applications/luci-app-argon-config
 
-# weburl 文件加执行权限
-chmod 7777 files/etc/init.d/weburl 
+# 修改 luci-theme-argonne 为默认主题
+sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci-nginx/Makefile
 
-# '应用过滤插件'
-git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
+# 删除 'lean主题'
+rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/themes/luci-theme-bootstrap
+rm -rf feeds/luci/themes/luci-theme-material
+rm -rf feeds/luci/themes/luci-theme-netgear
+rm -rf feeds/luci/themes/luci-theme-argon-mod
 
-# '管控插件'
-# git clone https://github.com/gdck/luci-app-control-weburl.git package/luci-app-control-weburl
+ # '删除kenzok部分包'
+
+rm -rf feeds/kenzok/luci-theme-atmaterial_new
+rm -rf feeds/kenzok/luci-theme-opentopd
+rm -rf feeds/kenzok/luci-theme-tomato
+rm -rf feeds/kenzok/luci-app-ssr-plus
+rm -rf feeds/kenzok/luci-app-passwall2
+rm -rf feeds/kenzok/luci-app-passwall
+rm -rf feeds/kenzok/luci-app-openclash
+rm -rf feeds/kenzok/luci-theme-argon
+rm -rf feeds/kenzok/luci-app-argon-config
 
 # '添加argon-config 使用最新argon
 # rm -rf package/lean/luci-theme-argon
 # git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 # git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
 
-# '添加luci-app-diskman
-https://github.com/lisaac/luci-app-diskman.git package/lean/luci-app-diskman
 
 # 使用原始最新版本
 git clone --depth=1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
-#  '添加新的主题包'
-# git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
-# git clone https://github.com/YL2209/luci-theme-argon-lr.git package/lean/luci-theme-argon-lr
+# '应用过滤插件'
+git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 
-# 修改 argon 为默认主题
-sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
-sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci/Makefile
-sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci-nginx/Makefile
+# '管控插件'
+git clone https://github.com/gdck/luci-app-control-weburl.git package/luci-app-control-weburl
+svn co https://github.com/wwz09/openwrt-packages/trunk/luci-app-control-webrestriction package/luci-app-control-webrestriction
+git clone https://github.com/ywt114/luci-app-control-timewol.git package/luci-app-control-timewol
+
+# weburl 文件加执行权限
+chmod 7777 files/etc/init.d/weburl 
+
+
 
 # 修改插件名字
 sed -i 's/"挂载点"/"磁盘挂载"/g' `grep "挂载点" -rl ./`
