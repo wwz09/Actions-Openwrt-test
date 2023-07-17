@@ -30,12 +30,12 @@ rm -rf feeds/luci/applications/luci-app-argon-config
 
 # 修改 luci-theme-argonne 为默认主题
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
-sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci/Makefile
-sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci-nginx/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' ./feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' feeds/luci/collections/luci-nginx/Makefile
 
 # 删除 'lean主题'
 rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/themes/luci-theme-bootstrap
+# rm -rf feeds/luci/themes/luci-theme-bootstrap
 rm -rf feeds/luci/themes/luci-theme-material
 rm -rf feeds/luci/themes/luci-theme-netgear
 rm -rf feeds/luci/themes/luci-theme-argon-mod
