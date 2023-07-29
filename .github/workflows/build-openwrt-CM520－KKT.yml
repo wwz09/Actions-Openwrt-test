@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build openwrt CM520－KKY
+name: Build openwrt CM520－KKT
 
 on:
   repository_dispatch:
