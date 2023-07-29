@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/wwz09/lede
   REPO_BRANCH: master
   BUILD_DEPENDS:  "ack antlr3 aria2 asciidoc autoconf automake autopoint binutils bison build-essential bzip2 \
                    ccache clang cmake cpio curl device-tree-compiler fastjar file flex gawk gettext gcc-multilib \
