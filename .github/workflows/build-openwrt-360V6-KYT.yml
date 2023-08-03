@@ -12,14 +12,14 @@ name: Build openwrt-360V6-KYT
 permissions: write-all
 #开启写权限，防止无法上传到release
 
-on:
+于:
   repository_dispatch:
   workflow_dispatch:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
         required: false
-        default: 'false'
+        默认: 'false'
 
 env:
   REPO_URL: https://github.com/wwz09/IPQ360V6
@@ -33,7 +33,7 @@ env:
                    scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd \
                    zlib1g-dev"
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: ./config/360v6.config
+  CONFIG_FILE: ./config/360V6.config
   DIY_P1_SH: ./diy-part1.1.sh
   DIY_P2_SH: ./360V6-KYT.sh
   UPLOAD_BIN_DIR: false
